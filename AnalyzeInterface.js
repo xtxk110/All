@@ -8,7 +8,7 @@ function GetInterfaceData(){
                           "http://api.baiyug.cn/vip/?url=",                         
                           "http://jqaaa.com/jx.php?url=",
 			  "http://api.wlzhan.com/sudu/?url=",
-                          "http://jx.ovov.cc/?url=",
+                          "http://jx.ovov.cc/?url="
 	];
 	return data;
 }
