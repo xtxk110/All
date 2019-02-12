@@ -13,6 +13,6 @@ function GetWebUrl(){
 }
 //http://www.gotopsports.com/Content/TV.apk  https://github.com/xtxk110/All/raw/master/TV.apk
 var obj={
-         ver:3.9,
+         ver:3.91,
 	 url:"https://github.com/xtxk110/All/raw/master/TV.apk"
 	};
