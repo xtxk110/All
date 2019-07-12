@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="never" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>史上最全Html和CSS布局技巧 - sayaa - 博客园</title>
+    <meta property="og:description" content="单列布局水平居中 水平居中的页面布局中最为常见的一种布局形式，多出现于标题，以及内容区域的组织形式，下面介绍四种实现水平居中的方法（注：下面各个实例中实现的是child元素的对齐操作，child元素的" />
+    <link type="text/css" rel="stylesheet" href="/bundles/blog-common.css?v=KOZafwuaDasEedEenI5aTy8aXH0epbm6VUJ0v3vsT_Q1"/>
+<link id="MainCss" type="text/css" rel="stylesheet" href="/skins/LovelyAnimal/bundle-LovelyAnimal.css?v=fndCNA65-SMXk9SNwIejiLuAjFMpMxIUPI2OGjywdvs1"/>
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/LovelyAnimal/bundle-LovelyAnimal-mobile.css?v=Go8Bj0ZU9gZXuPSKWcSQabps3E1njgJKYz4DiOq6-N41"/>
+    <link title="RSS" type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/-sayaa/rss"/>
+    <link title="RSD" type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/-sayaa/rsd.xml"/>
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/-sayaa/wlwmanifest.xml"/>
+    <script src="//common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script>var currentBlogId=371657;var currentBlogApp='-sayaa',cb_enable_mathjax=false;var isLogined=false;</script>
+    <script src="/bundles/blog-common.js?v=smtcUT5dhdu_5eEO8CKHYoVc7DPLgEBGzp6zKkstlzg1" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+
+
+<div class="pagelayout">
+    
+<div id="header">
+	<span>
+		<a id="Header1_HeaderTitle" href="https://www.cnblogs.com/-sayaa/">sayaa</a><br/><br/>
+		
+	</span>
+</div>
+    <div id="menu">
+        
+            
+<h1>导航</h1>
+<ul class="list">
+	<li class = "listitem"><a id="blog_nav_sitehome" class="listitem" href="https://www.cnblogs.com/">博客园</a></li>
+	<li class = "listitem"><a id="blog_nav_myhome" class="listitem" href="https://www.cnblogs.com/-sayaa/">首页</a></li>
+	<li class = "listitem"><a id="blog_nav_newpost" class="listitem" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+	<li class = "listitem"><a id="blog_nav_contact" accesskey="9" class="listitem" rel="nofollow" href="https://msg.cnblogs.com/send/sayaa">联系</a></li>
+	<li class = "listitem"><a id="blog_nav_rss" class="listitem" href="https://www.cnblogs.com/-sayaa/rss">订阅</a><a id="blog_nav_rss_image" href="https://www.cnblogs.com/-sayaa/rss"><img src="//www.cnblogs.com/images/xml.gif" alt="订阅" /></a>
+	<li class = "listitem"><a id="blog_nav_admin" class="listitem" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+</ul>
+            <div id="blog_stats">
+<h1>统计</h1>
+	<ul class="list">
+		<li class="listitem">随笔 - 10
+		<li class="listitem">文章 - 1
+		<li class="listitem">评论 - 0
+		<li class="listitem">引用 - 0
+	</li>
+</ul></div>
+            
+<div class = "listtitle">公告</div>
+	<ul class = "list">
+		<li class = "listitem">
+			<div id="blog-news"></div><script type="text/javascript">loadBlogNews();</script>
+	</li>
+</ul>
+            <div id="blog-sidecolumn"></div><script type="text/javascript">loadBlogSideColumn();</script>
+        
+        <div class="spacer">
+            &nbsp;</div>
+    </div>
+    <div id="main">
+        
+        <div id="post_detail">
+<div class="block">
+	<h1 class="block_title"><a id="cb_post_title_url" href="https://www.cnblogs.com/-sayaa/p/7403743.html">史上最全Html和CSS布局技巧</a></h1>
+	<div class="post">
+		<div class="postcontent">
+			<div id="cnblogs_post_body" class="blogpost-body"><p><strong>单列布局</strong><strong><strong>水平居中</strong></strong></p>
+<p>水平居中的页面布局中最为常见的一种布局形式，多出现于标题，以及内容区域的组织形式，下面介绍四种实现水平居中的方法（注：下面各个实例中实现的是child元素的对齐操作，child元素的父容器是parent元素）</p>
+<p><strong>使用inline-block 和 text-align实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">text<span class="pun">-<span class="pln">align<span class="pun">:<span class="pln"> center<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">child<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln"> <span class="kwd">inline<span class="pun">-<span class="pln">block<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p>优点：兼容性好；<br /> 不足：需要同时设置子元素和父元素</p>
+<p><strong>使用margin:0 auto来实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">child<span class="pun">{<span class="pln">width<span class="pun">:<span class="lit">200px<span class="pun">;<span class="pln">margin<span class="pun">:<span class="lit">0<span class="pln"> <span class="kwd">auto<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p>优点：兼容性好<br /> 缺点: 需要指定宽度</p>
+<p><strong>使用table实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">child<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">table<span class="pun">;<span class="pln">margin<span class="pun">:<span class="lit">0<span class="pln"> <span class="kwd">auto<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p>优点:只需要对自身进行设置<br /> 不足:IE6,7需要调整结构</p>
+<p><strong>使用绝对定位实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">position<span class="pun">:<span class="pln">relative<span class="pun">;}<span class="pln">
+<span class="com">/*或者实用margin-left的负值为盒子宽度的一半也可以实现，不过这样就必须知道盒子的宽度，但兼容性好*/<span class="pln">
+<span class="pun">.<span class="pln">child<span class="pun">{<span class="pln">position<span class="pun">:<span class="pln">absolute<span class="pun">;<span class="pln">left<span class="pun">:<span class="lit">50<span class="pun">%;<span class="pln">transform<span class="pun">:<span class="pln">translate<span class="pun">(-<span class="lit">50<span class="pun">%);}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p>不足：兼容性差,IE9及以上可用</p>
+<p><strong>实用flex布局实现</strong></p>
+<pre class="prettyprint"><code><span class="com">/*第一种方法*/<span class="pln">
+<span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">flex<span class="pun">;<span class="pln">justify<span class="pun">-<span class="pln">content<span class="pun">:<span class="pln">center<span class="pun">;}<span class="pln">
+<span class="com">/*第二种方法*/<span class="pln">
+<span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">flex<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">child<span class="pun">{<span class="pln">margin<span class="pun">:<span class="lit">0<span class="pln"> <span class="kwd">auto<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p>缺点：兼容性差，如果进行大面积的布局可能会影响效率</p>
+<p><strong>垂直居中</strong></p>
+<p><strong>vertical-align</strong></p>
+<blockquote>
+<p>我们都知道，每个人都有不同的嗜好，有的人喜欢吃甜食，有的人喜欢吃辣的东西，有的人不喜欢吃芹菜，有的人不喜欢吃羊肉等等。CSS中的有些元素也是这样，他们有的只对牛奶感兴趣，有的只喜欢吃坚果和果冻，而讨厌牛奶。而vertical-align呢，是个比较挑食的家伙，它只喜欢吃果冻，从小吃果冻长大，没有了果冻，它就会闹脾气，对你不理不睬。我称之为&ldquo;果冻依赖型元素&rdquo;，又称之为&ldquo;inline-block依赖型元素&rdquo;，也就是说,只有一个元素属于inline或是inline-block（table-cell也可以理解为inline-block水平）水平，其身上的vertical-align属性才会起作用。我对css-vertical-align的一些理解与认识</p>
+</blockquote>
+<p>在使用vertical-align的时候，由于对齐的基线是用行高的基线作为标记，故需要设置line-height或设置display:table-cell;</p>
+<pre class="prettyprint"><code><span class="com">/*第一种方法*/<span class="pln">
+<span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">table<span class="pun">-<span class="pln">cell<span class="pun">;<span class="pln">vertical<span class="pun">-<span class="pln">align<span class="pun">:<span class="pln">middle<span class="pun">;<span class="pln">height<span class="pun">:<span class="lit">20px<span class="pun">;}<span class="pln">
+<span class="com">/*第二种方法*/<span class="pln">
+<span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">display<span class="pun">:<span class="kwd">inline<span class="pun">-<span class="pln">block<span class="pun">;<span class="pln">vertical<span class="pun">-<span class="pln">align<span class="pun">:<span class="pln">middle<span class="pun">;<span class="pln">line<span class="pun">-<span class="pln">height<span class="pun">:<span class="lit">20px<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>实用绝对定位</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">position<span class="pun">:<span class="pln">relative<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">child<span class="pun">{<span class="pln">positon<span class="pun">:<span class="pln">absolute<span class="pun">;<span class="pln">top<span class="pun">:<span class="lit">50<span class="pun">%;<span class="pln">transform<span class="pun">:<span class="pln">translate<span class="pun">(<span class="lit">0<span class="pun">,-<span class="lit">50<span class="pun">%);}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>实用flex实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">flex<span class="pun">;<span class="pln">align<span class="pun">-<span class="pln">items<span class="pun">:<span class="pln">center<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>水平垂直全部居中</strong></p>
+<p>利用vertical-align,text-align,inline-block实现</p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">table<span class="pun">-<span class="pln">cell<span class="pun">;<span class="pln">vertical<span class="pun">-<span class="pln">align<span class="pun">:<span class="pln">middle<span class="pun">;<span class="pln">text<span class="pun">-<span class="pln">align<span class="pun">:<span class="pln">center<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">child<span class="pun">{<span class="pln">display<span class="pun">:<span class="kwd">inline<span class="pun">-<span class="pln">block<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>利用绝对定位实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">position<span class="pun">:<span class="pln">relative<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">child<span class="pun">{<span class="pln">position<span class="pun">:<span class="pln">absolute<span class="pun">;<span class="pln">top<span class="pun">:<span class="lit">50<span class="pun">%;<span class="pln">left<span class="pun">:<span class="lit">50<span class="pun">%;<span class="pln">transform<span class="pun">:<span class="pln">translate<span class="pun">(-<span class="lit">50<span class="pun">%,-<span class="lit">50<span class="pun">%);}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>利用flex实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">flex<span class="pun">;<span class="pln">justify<span class="pun">-<span class="pln">content<span class="pun">:<span class="pln">center<span class="pun">;<span class="pln">align<span class="pun">-<span class="pln">items<span class="pun">:<span class="pln">center<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>多列布局</strong><strong>左列定宽，右列自适应</strong></p>
+<p>该布局方式非常常见，适用于定宽的一侧常为导航，自适应的一侧为内容的布局<br /><img title="史上最全Html和CSS布局技巧_" src="http://img.mukewang.com/564c16cb00015c4603710131.png" alt="图片描述" /></p>
+<p><strong>利用float+margin实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">left<span class="pun">{<span class="kwd">float<span class="pun">:<span class="pln">left<span class="pun">;<span class="pln">width<span class="pun">:<span class="lit">100px<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">right<span class="pun">{<span class="pln">margin<span class="pun">-<span class="pln">left<span class="pun">;<span class="pln">margin<span class="pun">-<span class="pln">left<span class="pun">:<span class="lit">100px<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p>注：IE6会有3px的bug</p>
+<p><strong>利用float+margin(fix)实现</strong></p>
+<p><img title="史上最全Html和CSS布局技巧_" src="http://img.mukewang.com/564c16d70001e81703830137.png" alt="图片描述" /></p>
+<pre class="prettyprint"><code><span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"parent"<span class="tag">&gt;<span class="pln">
+    <span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"left"<span class="tag">&gt;&lt;/div&gt;<span class="pln">
+    <span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"right-fix"<span class="tag">&gt;<span class="pln">
+        <span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"right"<span class="tag">&gt;&lt;/div&gt;<span class="pln">
+    <span class="tag">&lt;/div&gt;<span class="pln">
+<span class="tag">&lt;/div&gt;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">left<span class="pun">{<span class="pln">width<span class="pun">:<span class="lit">100px<span class="pun">;<span class="kwd">float<span class="pun">:<span class="pln">left<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">right<span class="pun">-<span class="pln">fix<span class="pun">{<span class="pln">width<span class="pun">:<span class="lit">100<span class="pun">%;<span class="pln">margin<span class="pun">-<span class="pln">left<span class="pun">:-<span class="lit">100px<span class="pun">;<span class="kwd">float<span class="pun">:<span class="pln">right<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">right<span class="pun">{<span class="pln">margin<span class="pun">-<span class="pln">left<span class="pun">:<span class="lit">100px<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>使用float+overflow实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">left<span class="pun">{<span class="pln">width<span class="pun">:<span class="lit">100px<span class="pun">;<span class="kwd">float<span class="pun">:<span class="pln">left<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">right<span class="pun">{<span class="pln">overflow<span class="pun">:<span class="pln">hidden<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p>overflow:hidden，触发bfc模式，浮动无法影响，隔离其他元素，IE6不支持，左侧left设置margin-left当作left与right之间的边距，右侧利用overflow:hidden 进行形成bfc模式<br /> 如果我们需要将两列设置为等高，可以用下述方法将&ldquo;背景&rdquo;设置为等高，其实并不是内容的等高</p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">left<span class="pun">{<span class="pln">width<span class="pun">:<span class="lit">100px<span class="pun">;<span class="kwd">float<span class="pun">:<span class="pln">left<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">right<span class="pun">{<span class="pln">overflow<span class="pun">:<span class="pln">hidden<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">overflow<span class="pun">:<span class="pln">hidden<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">left<span class="pun">,.<span class="pln">right<span class="pun">{<span class="pln">padding<span class="pun">-<span class="pln">bottom<span class="pun">:<span class="lit">9999px<span class="pun">;<span class="pln">margin<span class="pun">-<span class="pln">bottom<span class="pun">:-<span class="lit">9999px<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>使用table实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">table<span class="pun">;<span class="pln">table<span class="pun">-<span class="pln">layout<span class="pun">:<span class="kwd">fixed<span class="pun">;<span class="pln">width<span class="pun">:<span class="lit">100<span class="pun">%;}<span class="pln">
+<span class="pun">.<span class="pln">left<span class="pun">{<span class="pln">width<span class="pun">:<span class="lit">100px<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">right<span class="pun">,.<span class="pln">left<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">table<span class="pun">-<span class="pln">cell<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>实用flex实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">flex<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">left<span class="pun">{<span class="pln">width<span class="pun">:<span class="lit">100px<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">right<span class="pun">{<span class="pln">flex<span class="pun">:<span class="lit">1<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p>利用右侧容器的flex:1，均分了剩余的宽度，也实现了同样的效果。而align-items 默认值为stretch，故二者高度相等</p>
+<p><strong>右列定宽，左列自适应</strong></p>
+<p><strong>实用float+margin实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">background<span class="pun">:<span class="pln">red<span class="pun">;<span class="pln">height<span class="pun">:<span class="lit">100px<span class="pun">;<span class="pln">margin<span class="pun">:<span class="lit">0<span class="pln"> <span class="kwd">auto<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">left<span class="pun">{<span class="pln">background<span class="pun">:<span class="pln">green<span class="pun">;<span class="pln">margin<span class="pun">-<span class="pln">right<span class="pun">:-<span class="lit">100px<span class="pun">;<span class="pln">width<span class="pun">:<span class="lit">100<span class="pun">%;<span class="kwd">float<span class="pun">:<span class="pln">left<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">right<span class="pun">{<span class="kwd">float<span class="pun">:<span class="pln">right<span class="pun">;<span class="pln">width<span class="pun">:<span class="lit">100px<span class="pun">;<span class="pln">background<span class="pun">:<span class="pln">blue<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>使用table实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">table<span class="pun">;<span class="pln">table<span class="pun">-<span class="pln">layout<span class="pun">:<span class="kwd">fixed<span class="pun">;<span class="pln">width<span class="pun">:<span class="lit">100<span class="pun">%;}<span class="pln">
+<span class="pun">.<span class="pln">left<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">table<span class="pun">-<span class="pln">cell<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">right<span class="pun">{<span class="pln">width<span class="pun">:<span class="lit">100px<span class="pun">;<span class="pln">display<span class="pun">:<span class="pln">table<span class="pun">-<span class="pln">cell<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>实用flex实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">flex<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">left<span class="pun">{<span class="pln">flex<span class="pun">:<span class="lit">1<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">right<span class="pun">{<span class="pln">width<span class="pun">:<span class="lit">100px<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>两列定宽，一列自适应</strong></p>
+<p><img title="史上最全Html和CSS布局技巧_" src="http://img.mukewang.com/564c16ed000164eb03790126.png" alt="图片描述" /></p>
+<p>基本html结构为父容器为parent,自容器为left,center,right.其中，left,center定宽，right自适应</p>
+<p><strong>利用float+margin实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">left<span class="pun">,.<span class="pln">center<span class="pun">{<span class="kwd">float<span class="pun">:<span class="pln">left<span class="pun">:<span class="pln">width<span class="pun">:<span class="lit">200px<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">right<span class="pun">{<span class="pln">margin<span class="pun">-<span class="pln">left<span class="pun">:<span class="lit">400px<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>利用float+overflow实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">left<span class="pun">,.<span class="pln">center<span class="pun">{<span class="kwd">float<span class="pun">:<span class="pln">left<span class="pun">:<span class="pln">width<span class="pun">:<span class="lit">200px<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">right<span class="pun">{<span class="pln">overflow<span class="pun">:<span class="pln">hidden<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>利用table实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">table<span class="pun">;<span class="pln">table<span class="pun">-<span class="pln">layout<span class="pun">:<span class="kwd">fixed<span class="pun">;<span class="pln">width<span class="pun">:<span class="lit">100<span class="pun">%;}<span class="pln">
+<span class="pun">.<span class="pln">left<span class="pun">,.<span class="pln">center<span class="pun">,.<span class="pln">right<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">table<span class="pun">-<span class="pln">cell<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">left<span class="pun">,.<span class="pln">center<span class="pun">{<span class="pln">width<span class="pun">:<span class="lit">200px<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>利用flex实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">flex<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">left<span class="pun">,.<span class="pln">center<span class="pun">{<span class="pln">width<span class="pun">:<span class="lit">100px<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">right<span class="pun">{<span class="pln">flex<span class="pun">:<span class="lit">1<span class="pun">}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong><strong>两侧定宽，中栏自适应</strong></strong></p>
+<p><img title="史上最全Html和CSS布局技巧_" src="http://img.mukewang.com/564c16f800017fab03750122.png" alt="图片描述" /></p>
+<p><strong>利用float+margin实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">left<span class="pun">{<span class="pln">width<span class="pun">：<span class="lit">100px<span class="pun">;<span class="kwd">float<span class="pun">:<span class="pln">left<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">center<span class="pun">{<span class="kwd">float<span class="pun">:<span class="pln">left<span class="pun">;<span class="pln">width<span class="pun">:<span class="lit">100<span class="pun">%;<span class="pln">margin<span class="pun">-<span class="pln">right<span class="pun">:-<span class="lit">200px<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">right<span class="pun">{<span class="pln">width<span class="pun">:<span class="lit">100px<span class="pun">;<span class="kwd">float<span class="pun">:<span class="pln">right<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>利用table实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">width<span class="pun">:<span class="lit">100<span class="pun">%;<span class="pln">display<span class="pun">:<span class="pln">table<span class="pun">;<span class="pln">table<span class="pun">-<span class="pln">layout<span class="pun">:<span class="kwd">fixed<span class="pun">}<span class="pln">
+<span class="pun">.<span class="pln">left<span class="pun">,.<span class="pln">center<span class="pun">,.<span class="pln">right<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">table<span class="pun">-<span class="pln">cell<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">left<span class="pun">{<span class="pln">width<span class="pun">:<span class="lit">100px<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">right<span class="pun">{<span class="pln">width<span class="pun">:<span class="lit">100px<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>利用flex实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">flex<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">left<span class="pun">{<span class="pln">width<span class="pun">:<span class="lit">100px<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">center<span class="pun">{<span class="pln">flex<span class="pun">:<span class="lit">1<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">right<span class="pun">{<span class="pln">width<span class="pun">:<span class="lit">100px<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>一列不定宽，一列自适应</strong></p>
+<p><img title="史上最全Html和CSS布局技巧_" src="http://img.mukewang.com/564c17080001e60e03540129.png" alt="图片描述" /></p>
+<p><strong>利用float+overflow实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">left<span class="pun">{<span class="kwd">float<span class="pun">:<span class="pln">left<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">right<span class="pun">{<span class="pln">overflow<span class="pun">:<span class="pln">hidden<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>利用table实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">table<span class="pun">;<span class="pln">table<span class="pun">-<span class="pln">layout<span class="pun">:<span class="kwd">fixed<span class="pun">;<span class="pln">width<span class="pun">:<span class="lit">100<span class="pun">%;}<span class="pln">
+<span class="pun">.<span class="pln">left<span class="pun">{<span class="pln">width<span class="pun">:<span class="lit">0.1<span class="pun">%;}<span class="pln">
+<span class="pun">.<span class="pln">left<span class="pun">,.<span class="pln">right<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">table<span class="pun">-<span class="pln">cell<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>利用flex实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">flex<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">right<span class="pun">{<span class="pln">flex<span class="pun">:<span class="lit">1<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>多列等分布局</strong></p>
+<p>多列等分布局常出现在内容中，多数为功能的，同阶级内容的并排显示等。</p>
+<p><img title="史上最全Html和CSS布局技巧_" src="http://img.mukewang.com/564c17120001d2e403610142.png" alt="图片描述" /></p>
+<p>html结构如下所示</p>
+<pre class="prettyprint"><code><span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"parent"<span class="tag">&gt;<span class="pln">
+    <span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"column"<span class="tag">&gt;<span class="pln">1<span class="tag">&lt;/div&gt;<span class="pln">
+    <span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"column"<span class="tag">&gt;<span class="pln">1<span class="tag">&lt;/div&gt;<span class="pln">
+    <span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"column"<span class="tag">&gt;<span class="pln">1<span class="tag">&lt;/div&gt;<span class="pln">
+    <span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"column"<span class="tag">&gt;<span class="pln">1<span class="tag">&lt;/div&gt;<span class="pln">
+<span class="tag">&lt;/div&gt;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>实用float实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">margin<span class="pun">-<span class="pln">left<span class="pun">:-<span class="lit">20px<span class="pun">}<span class="com">/*假设列之间的间距为20px*/<span class="pln">
+<span class="pun">.<span class="pln">column<span class="pun">{<span class="kwd">float<span class="pun">:<span class="pln">left<span class="pun">;<span class="pln">width<span class="pun">:<span class="lit">25<span class="pun">%;<span class="pln">padding<span class="pun">-<span class="pln">left<span class="pun">:<span class="lit">20px<span class="pun">;<span class="pln">box<span class="pun">-<span class="pln">sizing<span class="pun">:<span class="pln">border<span class="pun">-<span class="pln">box<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>利用table实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">parent<span class="pun">-<span class="pln">fix<span class="pun">{<span class="pln">margin<span class="pun">-<span class="pln">left<span class="pun">:-<span class="lit">20px<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">table<span class="pun">;<span class="pln">table<span class="pun">-<span class="pln">layout<span class="pun">:<span class="kwd">fixed<span class="pun">;<span class="pln">width<span class="pun">:<span class="lit">100<span class="pun">%;}<span class="pln">
+<span class="pun">.<span class="pln">column<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">table<span class="pun">-<span class="pln">cell<span class="pun">;<span class="pln">padding<span class="pun">-<span class="pln">left<span class="pun">:<span class="lit">20px<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>利用flex实现</strong></p>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">flex<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">column<span class="pun">{<span class="pln">flex<span class="pun">:<span class="lit">1<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">column<span class="pun">+.<span class="pln">column<span class="pun">{<span class="pln">margin<span class="pun">-<span class="pln">left<span class="pun">:<span class="lit">20px<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>九宫格布局</strong></p>
+<p><strong>使用table实现</strong></p>
+<pre class="prettyprint"><code><span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"parent"<span class="tag">&gt;<span class="pln">
+        <span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"row"<span class="tag">&gt;&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"item"<span class="tag">&gt;&lt;/div&gt;&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"item"<span class="tag">&gt;&lt;/div&gt;&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"item"<span class="tag">&gt;&lt;/div&gt;&lt;/div&gt;<span class="pln">
+        <span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"row"<span class="tag">&gt;&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"item"<span class="tag">&gt;&lt;/div&gt;&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"item"<span class="tag">&gt;&lt;/div&gt;&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"item"<span class="tag">&gt;&lt;/div&gt;&lt;/div&gt;<span class="pln">
+        <span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"row"<span class="tag">&gt;&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"item"<span class="tag">&gt;&lt;/div&gt;&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"item"<span class="tag">&gt;&lt;/div&gt;&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"item"<span class="tag">&gt;&lt;/div&gt;&lt;/div&gt;<span class="pln">
+    <span class="tag">&lt;/div&gt;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">table<span class="pun">;<span class="pln">table<span class="pun">-<span class="pln">layout<span class="pun">:<span class="kwd">fixed<span class="pun">;<span class="pln">width<span class="pun">:<span class="lit">100<span class="pun">%;}<span class="pln">
+<span class="pun">.<span class="pln">row<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">table<span class="pun">-<span class="pln">row<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">item<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">table<span class="pun">-<span class="pln">cell<span class="pun">;<span class="pln">width<span class="pun">:<span class="lit">33.3<span class="pun">%;<span class="pln">height<span class="pun">:<span class="lit">200px<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>实用flex实现</strong></p>
+<pre class="prettyprint"><code><span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"parent"<span class="tag">&gt;<span class="pln">
+<span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"row"<span class="tag">&gt;&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"item"<span class="tag">&gt;&lt;/div&gt;&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"item"<span class="tag">&gt;&lt;/div&gt;&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"item"<span class="tag">&gt;&lt;/div&gt;&lt;/div&gt;<span class="pln">
+<span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"row"<span class="tag">&gt;&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"item"<span class="tag">&gt;&lt;/div&gt;&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"item"<span class="tag">&gt;&lt;/div&gt;&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"item"<span class="tag">&gt;&lt;/div&gt;&lt;/div&gt;<span class="pln">
+<span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"row"<span class="tag">&gt;&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"item"<span class="tag">&gt;&lt;/div&gt;&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"item"<span class="tag">&gt;&lt;/div&gt;&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"item"<span class="tag">&gt;&lt;/div&gt;&lt;/div&gt;<span class="pln">
+<span class="tag">&lt;/div&gt;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">flex<span class="pun">;<span class="pln">flex<span class="pun">-<span class="pln">direction<span class="pun">:<span class="pln">column<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">row<span class="pun">{<span class="pln">height<span class="pun">:<span class="lit">100px<span class="pun">;<span class="pln">display<span class="pun">:<span class="pln">flex<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">item<span class="pun">{<span class="pln">width<span class="pun">:<span class="lit">100px<span class="pun">;<span class="pln">background<span class="pun">:<span class="pln">red<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>全屏布局</strong></p>
+<p><img title="史上最全Html和CSS布局技巧_" src="http://img.mukewang.com/564c172000018d3b04920286.png" alt="图片描述" /></p>
+<p><strong>利用绝对定位实现</strong></p>
+<pre class="prettyprint"><code><span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"parent"<span class="tag">&gt;<span class="pln">
+<span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"top"<span class="tag">&gt;<span class="pln">top<span class="tag">&lt;/div&gt;<span class="pln">
+<span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"left"<span class="tag">&gt;<span class="pln">left<span class="tag">&lt;/div&gt;<span class="pln">
+<span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"right"<span class="tag">&gt;<span class="pln">right<span class="tag">&lt;/div&gt;<span class="pln">
+<span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"bottom"<span class="tag">&gt;<span class="pln">bottom<span class="tag">&lt;/div&gt;<span class="pln">
+<span class="tag">&lt;/div&gt;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<pre class="prettyprint"><code><span class="pln">html<span class="pun">,<span class="pln">body<span class="pun">,<span class="pln">parent<span class="pun">{<span class="pln">height<span class="pun">:<span class="lit">100<span class="pun">%;<span class="pln">overflow<span class="pun">:<span class="pln">hidden<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">top<span class="pun">{<span class="pln">position<span class="pun">:<span class="pln">absolute<span class="pun">:<span class="pln">top<span class="pun">:<span class="lit">0<span class="pun">;<span class="pln">left<span class="pun">:<span class="lit">0<span class="pun">;<span class="pln">right<span class="pun">:<span class="lit">0<span class="pun">;<span class="pln">height<span class="pun">:<span class="lit">100px<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">left<span class="pun">{<span class="pln">position<span class="pun">:<span class="pln">absolute<span class="pun">;<span class="pln">top<span class="pun">:<span class="lit">100px<span class="pun">;<span class="pln">left<span class="pun">:<span class="lit">0<span class="pun">;<span class="pln">bottom<span class="pun">:<span class="lit">50px<span class="pun">;<span class="pln">width<span class="pun">:<span class="lit">200px<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">right<span class="pun">{<span class="pln">position<span class="pun">:<span class="pln">absolute<span class="pun">;<span class="pln">overflow<span class="pun">:<span class="kwd">auto<span class="pun">;<span class="pln">left<span class="pun">:<span class="lit">200px<span class="pun">;<span class="pln">right<span class="pun">:<span class="lit">0<span class="pun">;<span class="pln">top<span class="pun">:<span class="lit">100px<span class="pun">;<span class="pln">bottom<span class="pun">:<span class="lit">50px<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">bottom<span class="pun">{<span class="pln">position<span class="pun">:<span class="pln">absolute<span class="pun">;<span class="pln">left<span class="pun">:<span class="lit">0<span class="pun">;<span class="pln">right<span class="pun">:<span class="lit">0<span class="pun">;<span class="pln">bottom<span class="pun">:<span class="lit">0<span class="pun">;<span class="pln">height<span class="pun">:<span class="lit">50px<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>利用flex实现</strong></p>
+<pre class="prettyprint"><code><span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"parent"<span class="tag">&gt;<span class="pln">
+<span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"top"<span class="tag">&gt;<span class="pln">top<span class="tag">&lt;/div&gt;<span class="pln">
+<span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"middle"<span class="tag">&gt;<span class="pln">
+<span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"left"<span class="tag">&gt;<span class="pln">left<span class="tag">&lt;/div&gt;<span class="pln">
+<span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"right"<span class="tag">&gt;<span class="pln">right<span class="tag">&lt;/div&gt;<span class="pln">
+<span class="tag">&lt;/div&gt;<span class="pln">
+<span class="tag">&lt;div<span class="pln"> <span class="atn">class<span class="pun">=<span class="atv">"bottom"<span class="tag">&gt;<span class="pln">bottom<span class="tag">&lt;/div&gt;<span class="pln">
+<span class="tag">&lt;/div&gt;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<pre class="prettyprint"><code><span class="pun">.<span class="pln">parent<span class="pun">{<span class="pln">display<span class="pun">:<span class="pln">flex<span class="pun">;<span class="pln">flex<span class="pun">-<span class="pln">direction<span class="pun">:<span class="pln">column<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">top<span class="pun">{<span class="pln">height<span class="pun">:<span class="lit">100px<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">bottom<span class="pun">{<span class="pln">height<span class="pun">:<span class="lit">50px<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">middle<span class="pun">{<span class="pln">flex<span class="pun">:<span class="lit">1<span class="pun">;<span class="pln">display<span class="pun">:<span class="pln">flex<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">left<span class="pun">{<span class="pln">width<span class="pun">:<span class="lit">200px<span class="pun">;}<span class="pln">
+<span class="pun">.<span class="pln">right<span class="pun">{<span class="pln">flex<span class="pun">:<span class="lit">1<span class="pun">;<span class="pln">overflow<span class="pun">:<span class="kwd">auto<span class="pun">;}</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>响应式布局</strong></p>
+<p><strong>meta标签的实用</strong></p>
+<p>设置布局宽度等于设备宽度，布局viewport等于度量viewport</p>
+<pre class="prettyprint"><code><span class="tag">&lt;meta<span class="pln"> <span class="atn">name<span class="pun">=<span class="atv">"viewport"<span class="pln"> <span class="atn">content<span class="pun">=<span class="atv">"width=device-width,initial-scale=1"<span class="tag">&gt;</span></span></span></span></span></span></span></span></span></span></code></pre>
+<p><strong>媒体查询</strong></p>
+<blockquote>
+<p>HTML 4和CSS 2目前支持为不同的媒体类型设定专有的样式表, 比如, 一个页面在屏幕上显示时使用无衬线字体,<br /> 而在打印时则使用衬线字体, screen 和 print 是两种已定义的媒体类型, 媒体查询让样式表有更强的针对性,<br /> 扩展了媒体类型的功能;媒体查询由媒体类型和一个或多个检测媒体特性的条件表达式组成,<br /> 媒体查询中可用于检测的媒体特性有width、height和color（等）, 使用媒体查询, 可以在不改变页面内容的情况下,<br /> 为特定的一些输出设备定制显示效果。</p>
+
+</blockquote>
+<p><strong>语法</strong></p>
+<pre class="prettyprint"><code><span class="lit">@media<span class="pln"> screen <span class="kwd">and<span class="pln"> <span class="pun">(<span class="pln">max<span class="pun">-<span class="pln">width<span class="pun">:<span class="lit">960px<span class="pun">){....}<span class="pln">
+<span class="pun">&lt;<span class="pln">link rel<span class="pun">=<span class="str">"stylesheet"<span class="pln"> media<span class="pun">=<span class="str">"screen and (max-width:960px)"<span class="pln"> href<span class="pun">=<span class="str">'xxx.css'<span class="pln"> <span class="pun">/&gt;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre>
+<p>作者：mrshi<br /> 原文地址：<a href="http://segmentfault.com/a/1190000003931851" target="_blank">http://segmentfault.com/a/1190000003931851</a></p>
+<p>
+<br />作者：                        GD_SeHun                         <br />链接：http://www.imooc.com/article/2235<br />来源：慕课网</p></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+
+
+		</div>
+		<div class="itemdesc">
+			posted on <span id="post-date">2017-08-21 12:38</span> <a href='https://www.cnblogs.com/-sayaa/'>sayaa</a> 阅读(<span id="post_view_count">...</span>) 评论(<span id="post_comment_count">...</span>)  <a href ="https://i.cnblogs.com/EditPosts.aspx?postid=7403743" rel="nofollow">编辑</a> <a href="#" onclick="AddToWz(7403743);return false;">收藏</a>
+		</div>
+	</div>
+	<div class="seperator">&nbsp;</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=371657,cb_entryId=7403743,cb_blogApp=currentBlogApp,cb_blogUserGuid='f2df0d0a-9012-4776-5ad9-08d49c352df3',cb_entryCreatedDate='2017/8/21 12:38:00';loadViewCount(cb_entryId);var cb_postType=1;var isMarkdown=false;</script>
+	
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id='comment_form' class='commentform'>
+<a name='commentform'></a>
+<div id='divCommentShow'></div>
+<div id='comment_nav'><span id='span_refresh_tips'></span><a href='javascript:void(0);' onclick='return RefreshCommentList();' id='lnk_RefreshComments' runat='server' clientidmode='Static'>刷新评论</a><a href='#' onclick='return RefreshPage();'>刷新页面</a><a href='#top'>返回顶部</a></div>
+<div id='comment_form_container'></div>
+<div class='ad_text_commentbox' id='ad_text_under_commentbox'></div>
+<div id='ad_t2'></div>
+<div id='opt_under_post'></div>
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+<script>
+  googletag.cmd.push(function() {
+        googletag.defineSlot('/1090369/C1', [300, 250], 'div-gpt-ad-1546353474406-0').addService(googletag.pubads());
+        googletag.defineSlot('/1090369/C2', [468, 60], 'div-gpt-ad-1539008685004-0').addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+  });
+</script>
+<div id='cnblogs_c1' class='c_ad_block'>
+    <div id='div-gpt-ad-1546353474406-0' style='height:250px; width:300px;'></div>
+</div>
+<div id='under_post_news'></div>
+<div id='cnblogs_c2' class='c_ad_block'>
+    <div id='div-gpt-ad-1539008685004-0' style='height:60px; width:468px;'></div>
+</div>
+<div id='under_post_kb'></div>
+<div id='HistoryToday' class='c_ad_block'></div>
+<script type='text/javascript'>
+ if(enablePostBottom()) {
+    codeHighlight();
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverT2();
+    deliverC1();
+    deliverC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);  
+}
+</script>
+</div>
+
+    
+        <div class="spacer">
+            &nbsp;</div>
+    </div>
+    
+<div class="footer">
+	Powered by: 
+	<br />
+	
+	<a id="Footer1_Hyperlink3" NAME="Hyperlink1" href="https://www.cnblogs.com/" style="font-family:Verdana;font-size:12px;">博客园</a>
+	<br />
+	Copyright &copy; sayaa
+</div>
+</div>
+
+
+</body>
+</html>
